@@ -50,36 +50,37 @@
             <input type="hidden" name="id" th:value="${emp.getId()}">
             <div class="form-group">
                 <label>LastName</label>
-                <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+                <input th:value="${emp.getLastName()}" type="text" name="lastName" class="form-control" placeholder="Last Name">
             </div>
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" name="email" class="form-control"placeholder="Email">
+                <input th:value="${emp.getEmail()}" type="email" name="email" class="form-control"placeholder="Email">
             </div>
             <div class="form-group">
                 <label >Gender</label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" value="1">
+                    <input th:checked="${emp.getGender()==1}" class="form-check-input" type="radio" name="gender" value="1">
                     <label class="form-check-label">男</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" value="0">
+                    <input th:checked="${emp.getGender()==0}" class="form-check-input" type="radio" name="gender" value="0">
                     <label class="form-check-label">女</label>
                 </div>
             </div>
             <div class="form-group">
                 <label>department</label>
                 <select class="form-control" name="department.id">
-                    <option th:each="dept:${departments}"
+                    <option th:selected="${dept.getId()==emp.getDepartment().getId()}"
+                            th:each="dept:${departments}"
                             th:text="${dept.getDepartmentName()}"
                             th:value="${dept.getId()}"></option>
                 </select>
             </div>
             <div class="form-group">
                 <label>Birth</label>
-                <input type="text" name="birth" class="form-control" placeholder="Birth">
+                <input th:value="${#dates.format(emp.getBirth(),'yyyy-MM-dd')}" type="text" name="birth" class="form-control" placeholder="Birth">
             </div>
-            <button type="submit" class="btn btn-primary">添加</button>
+            <button type="submit" class="btn btn-primary">修改</button>
         </form>
     </main>
   </div>

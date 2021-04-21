@@ -26,4 +26,12 @@ public class LoginController {
         }
 
     }
+
+    @RequestMapping("/user/signout")
+    public String signout(HttpSession session){
+        session.invalidate();
+        return "redirect=/index.html";
+
+    }
+
 }
