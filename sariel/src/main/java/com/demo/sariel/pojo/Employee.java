@@ -15,15 +15,15 @@ public class Employee {
     private String lastName;
     private String email;
     private Integer gender;
-    private Department department;
+    private String department;
     private Date birth;
 
-    public Employee(Integer id, String lastName, String email, Integer gender, Department department) {
-        this.id = id;
-        this.lastName = lastName;
-        this.email = email;
-        this.gender = gender;
-        this.department = department;
-        this.birth = new Date();
-    }
+//    public Employee(Integer id, String lastName, String email, Integer gender, String department,Date birth) {
+//        this.id = id;
+//        this.lastName = lastName;
+//        this.email = email;
+//        this.gender = gender;
+//        this.department = department;
+//        this.birth = new Date();
+//    }
 }

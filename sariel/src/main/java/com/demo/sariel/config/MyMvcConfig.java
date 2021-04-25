@@ -16,7 +16,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("index");
+        registry.addViewController("/").setViewName("dashboard");
         registry.addViewController("/index.html").setViewName("index");
         registry.addViewController("/main.html").setViewName("dashboard");
     }
@@ -28,13 +28,13 @@ public class MyMvcConfig implements WebMvcConfigurer {
     }
 
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginHandlerInterceprtor())
-                .addPathPatterns("/**")
-                .excludePathPatterns("/index.html","/","/user/login","/assets/**","/**.css","**.js");
-
-
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(new LoginHandlerInterceprtor())
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/index.html","/","/user/login","/assets/**","/**.css","**.js");
+//
+//
+//    }
 }
 

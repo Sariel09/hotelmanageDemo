@@ -70,7 +70,7 @@
             <div class="form-group">
                 <label>department</label>
                 <select class="form-control" name="department.id">
-                    <option th:selected="${dept.getId()==emp.getDepartment().getId()}"
+                    <option th:selected="${dept.getId()==emp.getDepartment()}"
                             th:each="dept:${departments}"
                             th:text="${dept.getDepartmentName()}"
                             th:value="${dept.getId()}"></option>
