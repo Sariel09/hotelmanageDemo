@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.sariel.Mapper.CustomerMapper">
+
+
+    <select id="SelectAll" resultType="Customer">
+        select * from customer
+    </select>
+
+    <select id="SelectByCount" resultType="Integer">
+        select count(*) from customer
+    </select>
+
+    <select id="SelectById" parameterType="String" resultType="Customer">
+        select * from customer where cno = #{cno}
+    </select>
+
+    <insert id="InsertByCustomer" parameterType="Customer">
+        insert into customer(cno,cname,telephone) values(#{cno},#{cname},#{telephone})
+    </insert>
+
+</mapper>
