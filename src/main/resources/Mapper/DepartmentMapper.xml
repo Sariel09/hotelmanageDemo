@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.sariel.Mapper.DepartmentMapper">
+    <select id="queryDepartmentList" resultType="Department">
+        select * from department
+    </select>
+    <select id="queryDepartmentById" resultType="Department">
+        select * from department where id=#{id}
+    </select>
+    <select id="queryDepartmentName" resultType="Department">
+        select * from department where departmentName=#{departmentName}
+    </select>
+</mapper>
