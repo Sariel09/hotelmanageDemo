@@ -68,7 +68,7 @@
                 <td th:text="${emp.getLastName()}"></td>
                 <td th:text="${emp.getEmail()}"></td>
                 <td th:text="${emp.getGender()==0?'女':'男'}"></td>
-                <td th:text="${emp.getDepartment()}"></td>
+                <td th:text="${emp.getDepartmentId()}"></td>
                 <td th:text="${#dates.format(emp.getBirth(),'yyyy-MM-dd')}"></td>
                 <td>
                   <a class="ui primary button" th:href=@{/emp/}+${emp.getId()}>编辑</a>

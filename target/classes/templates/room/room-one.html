@@ -26,6 +26,10 @@
         user-select: none;
       }
 
+      h4 {color:red;
+          font-size: 1.1rem;
+      }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -47,7 +51,6 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="eleven wide column">
-        <div class="ui teal segment">
           <h2 ><i class="home icon"></i>客房查询</h2>
           <form  name="search" action="#" th:action="@{/searchroom}" method="post">
             <div class="ui icon  input m-mobile">
@@ -55,7 +58,7 @@
               <i onclick="document.forms['search'].submit()"  class="search link icon"></i>
             </div>
           </form>
-          <div class="ui teal segment" th:each="room : ${rooms}">
+          <div class="ui segment" th:each="room : ${rooms}">
             <div class="ui stackable grid">
               <h4>房间号:</h4>
               <p th:text="${room.rno}">1</p>
@@ -73,7 +76,6 @@
               <p th:text="${room.rstatus}">1</p>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>

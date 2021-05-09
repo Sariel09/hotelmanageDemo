@@ -10,11 +10,11 @@
         select * from employee where id=#{id}
     </select>
     <insert id="addEmployee" parameterType="Employee">
-        insert into employee (id,birth,department,email,gender,lastName)
-        values (#{id},#{birth},#{department},#{email},#{gender},#{lastName})
+        insert into employee (id,birth,departmentId,email,gender,lastName)
+        values (#{id},#{birth},#{departmentId},#{email},#{gender},#{lastName})
     </insert>
     <update id="updateEmployee" parameterType="Employee">
-        update employee set id=#{id},birth=#{birth},department=#{department},email=#{email},gender=#{gender},lastName=#{lastName}
+        update employee set id=#{id},birth=#{birth},departmentId=#{departmentId},email=#{email},gender=#{gender},lastName=#{lastName}
         where id=#{id}
     </update>
     <delete id="deleteEmployee" parameterType="int">
