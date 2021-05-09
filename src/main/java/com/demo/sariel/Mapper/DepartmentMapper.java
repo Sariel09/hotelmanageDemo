@@ -18,4 +18,6 @@ public interface DepartmentMapper {
     Department queryDepartmentName(Department department);
 
 
+
+
 }

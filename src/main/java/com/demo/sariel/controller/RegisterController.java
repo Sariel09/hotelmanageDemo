@@ -45,7 +45,7 @@ public class RegisterController {
             // 写入数据库
             sysUserMapper.insert(sysUser);
             //  重定向到 login 页面
-            return "redirect:/login";
+            return "redirect=/login.html";
         } catch (Exception e) {
             // 注册错误
             model.addAttribute("error", true);

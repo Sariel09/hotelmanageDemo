@@ -15,8 +15,8 @@ public class Employee {
     private String lastName;
     private String email;
     private Integer gender;
-    private String department;
     private Date birth;
+    private Integer departmentId;
 
 //    public Employee(Integer id, String lastName, String email, Integer gender, String department,Date birth) {
 //        this.id = id;

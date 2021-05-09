@@ -26,9 +26,11 @@ public class EmployeeControler {
     DepartmentMapper departmentMapper;
 
     @RequestMapping("/emps")
-    public String queryEmployee(Model model){
+    public String queryEmployee(Department department,Model model){
         Collection<Employee> employeeList = employeeMapper.queryEmployeeList();
         model.addAttribute("emps",employeeList);
+        Department departments = departmentMapper.queryDepartmentName(department);
+        model.addAttribute("departments",departments);
 
         return "emp/list";
     }
@@ -64,11 +66,11 @@ public class EmployeeControler {
         employeeMapper.updateEmployee(employee);
         return "redirect:/emps";
     }
-    @GetMapping("/addEmp")
-    public String addEmp(){
-        employeeMapper.addEmployee(new Employee(1,"AA","123@qq.com",1,"101",new Date(2020,01,01)));
-        return "ok";
-    }
+//    @GetMapping("/addEmp")
+//    public String addEmp(){
+//        employeeMapper.addEmployee(new Employee(1,"AA","123@qq.com",1,"101",new Date(2020,01,01)));
+//        return "ok";
+//    }
 
     @GetMapping("/delEmp/{id}")
     public String deleteEmp(@PathVariable("id") int id){

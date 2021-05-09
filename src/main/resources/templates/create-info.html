@@ -50,24 +50,30 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
       <div class="#">
-        <div class="ui segment">
           <h2 ><i class="home icon"></i>开房</h2>
           <div class="m-padded-tb-large m-container">
             <div class="ui container">
               <form action="#" method="post"  th:action="@{/createinfo}" class="ui  form">
                 <div class="required field">
+                  <div class="ui segment">
                   <div class="ui left labeled input">
                     <label class="ui basic label">顾客姓名</label>
                     <input type="text" name="cname"  placeholder="顾客姓名">
                   </div>
+                  </div>
+                  <div class="ui segment">
                   <div class="ui left labeled input">
                     <label class="ui basic label">身份证号</label>
                     <input type="text" name="cno"  placeholder="身份证号" >
                   </div>
+                  </div>
+                  <div class="ui segment">
                   <div class="ui left labeled input">
                     <label class="ui basic label">电话号码</label>
                     <input type="text" name="telephone"  placeholder="电话号码" >
                   </div>
+                  </div>
+                  <div class="ui segment">
                   <div class="ui left labeled action input">
                     <label class="ui compact basic label"> 房间号</label>
                     <div class="ui fluid selection dropdown">
@@ -75,13 +81,16 @@
                       <i class="dropdown icon"></i>
                       <div class="default text">房间号</div>
                       <div class="menu">
-                        <div  th:each="room : ${rooms}" class="item" data-value="1" th:data-value="${room.rno}" th:text="${room.rno}">101</div>
+                        <div th:each="room : ${rooms}" class="item" data-value="1" th:data-value="${room.rno}" th:text="${room.rno}">101</div>
                       </div>
                     </div>
                   </div>
+                  </div>
+                  <div class="ui segment">
                   <div class="ui left labeled input">
                     <label class="ui basic label">押金</label>
                     <input type="text" name="deposit"  placeholder="押金" >
+                  </div>
                   </div>
                 </div>
 
@@ -93,7 +102,6 @@
 
           </div>
         </div>
-      </div>
   </main>
 </div>
 </div>

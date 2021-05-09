@@ -58,7 +58,6 @@
 
 
       <div class="eleven wide column">
-        <div class="uisegment">
           <h2 ><i class="home icon"></i>顾客查询</h2>
           <form  name="search" action="#" th:action="@{/searchcustomer}" method="post">
             <div class="ui icon  input m-mobile">
@@ -81,16 +80,15 @@
               <p th:text="${customer.telephone}">1</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="ui bottom attached segment">
-        <div class="ui middle aligned two column grid">
-          <div class="column">
-            <a th:href="@{/searchcustomer(pagenum=${pagenum}-1)}" class="ui basic button">上一页</a>
-          </div>
-          <div class="right aligned column">
-            <a href="#"  th:href="@{/searchcustomer(pagenum=${pagenum}+1)}" class="ui basic button">下一页</a>
-          </div>
+          <div class="ui bottom attached segment">
+            <div class="ui middle aligned two column grid">
+              <div class="column">
+                <a th:href="@{/searchcustomer(pagenum=${pagenum}-1)}" class="ui basic button">上一页</a>
+              </div>
+              <div class="right aligned column">
+                <a href="#" th:href="@{/searchcustomer(pagenum=${pagenum}+1)}" class="ui basic button">下一页</a>
+              </div>
+            </div>
         </div>
       </div>
     </main>

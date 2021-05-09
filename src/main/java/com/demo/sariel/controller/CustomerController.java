@@ -44,7 +44,7 @@ public class CustomerController {
         return "customer";
     }
     @PostMapping("/searchcustomer")
-    public String  searchone(@RequestParam String query, Model model){
+    public String searchone(@RequestParam String query, Model model){
         if(query==""){
             return "redirect:/searchcustomer";
         }

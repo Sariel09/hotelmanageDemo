@@ -12,4 +12,5 @@
     <select id="queryDepartmentName" resultType="Department">
         select * from department where departmentName=#{departmentName}
     </select>
+
 </mapper>
